@@ -1,4 +1,5 @@
-import java.util.UUID;
+
+package base.animal.data;
 
 public class Animal {
     int id;
