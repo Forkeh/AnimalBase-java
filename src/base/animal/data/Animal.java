@@ -1,7 +1,9 @@
 
 package base.animal.data;
 
-public class Animal {
+import org.jetbrains.annotations.NotNull;
+
+public class Animal implements Comparable<Animal> {
     int id;
     String name;
     String type;
@@ -10,7 +12,8 @@ public class Animal {
     boolean star;
     boolean winner;
 
-    public Animal() {}
+    public Animal() {
+    }
 
     public Animal(Animal animal) {
         this.id = animal.id;
@@ -105,5 +108,10 @@ public class Animal {
                 ", star=" + star +
                 ", winner=" + winner +
                 '}';
+    }
+
+    @Override
+    public int compareTo(@NotNull Animal o) {
+        return this.name.compareTo(o.name);
     }
 }

@@ -1,11 +1,12 @@
 package base.animal.app;
 
 import base.animal.data.Animal;
+import org.jetbrains.annotations.NotNull;
 
 public class InitData {
-    private AnimalController controller;
+    private final AnimalController controller;
 
-    public InitData(AnimalController controller) {
+    public InitData(@NotNull AnimalController controller) {
         this.controller = controller;
     }
 
@@ -15,13 +16,5 @@ public class InitData {
         controller.createAnimal(new Animal("Garfield", "Cat", "Laziest", 10));
         controller.createAnimal(new Animal("Scooby", "Dog", "Scarest", 8));
         controller.createAnimal(new Animal("Felix", "Cat", "Blackest", 5));
-    }
-
-    public AnimalController getController() {
-        return controller;
-    }
-
-    public void setController(AnimalController controller) {
-        this.controller = controller;
     }
 }
